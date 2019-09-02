@@ -1,4 +1,4 @@
-package com.microstrategy.DataStructure;
+package com.DataStructure;
 
 import java.util.ArrayList;
 import java.util.Comparator;
