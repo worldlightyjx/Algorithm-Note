@@ -1,4 +1,4 @@
-package com.yang.acwing;
+package com.yang.acwing.DP;
 
 import java.util.Scanner;
 

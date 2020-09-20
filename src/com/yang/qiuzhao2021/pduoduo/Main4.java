@@ -1,4 +1,4 @@
-package com.yang.pduoduo;
+package com.yang.qiuzhao2021.pduoduo;
 
 import java.util.LinkedList;
 import java.util.Queue;

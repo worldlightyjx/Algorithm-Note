@@ -43,7 +43,6 @@ public class Topolgic{
     }
 
     public static void main(String[] args) throws Exception{
-        Scanner sc = new Scanner(new BufferedInputStream(System.in));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter log = new BufferedWriter(new OutputStreamWriter(System.out));
         String[] values = br.readLine().split("\\s+");

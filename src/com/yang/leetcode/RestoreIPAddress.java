@@ -6,7 +6,7 @@ import java.util.List;
 public class RestoreIPAddress{
 
     public static void main(String[] args) {
-        String s = "25525511135";
+        String s = "0000";
         List<String> res;
         res = restoreIpAddresses(s);
         for (String str : res){
@@ -16,7 +16,7 @@ public class RestoreIPAddress{
 
     public static List<String> restoreIpAddresses(String s) {
         List<String> res = new ArrayList<>();
-        dfs(s,res,"",0,0);
+        dfs2(s,res,0,0,"");
         return res;
     }
 
@@ -31,5 +31,28 @@ public class RestoreIPAddress{
             if((str.length()>1&&str.startsWith("0"))||(i==3&&Integer.parseInt(str)>=256)) continue;
             dfs(ip, res, cur+str+(count==3?"":"."), index+i, count+1);
         }
+    }
+
+    private static void dfs2(String s, List<String> ans, int u, int cnt, String path){
+        if (u==s.length()){
+            if(cnt==4){
+                ans.add(path.substring(1));
+            }
+            return;
+        }
+        if(cnt>4) return;
+        if(s.charAt(u)=='0'){
+            dfs2(s,ans,u+1,cnt+1,path+".0");
+        }else{
+            for (int i = u, t = 0; i <s.length() ; i++) {
+                t = t * 10 + (s.charAt(i)-'0');
+                if(t<256)
+                    dfs2(s,ans,i+1,cnt+1,path+"."+t);
+                else
+                    break;
+            }
+
+        }
+
     }
 }
