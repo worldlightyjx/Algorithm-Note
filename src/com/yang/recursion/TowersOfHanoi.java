@@ -1,12 +1,12 @@
-package com.yang.recursion;
+package src.com.yang.recursion;
 
 import java.util.Scanner;
 
-public class TowersofHanoi {
+public class TowersOfHanoi {
     static int cnt = 0;
-    public static void move(int disk, char N, char M){
+    public static void move(int disk, char from, char to){
         cnt +=1;
-        System.out.println("第"+ cnt +"次移动： "+ "把" + disk +"号盘从" + N + "移动到" + M);
+        System.out.println("第"+ cnt +"次移动： "+ "把" + disk +"号盘从" + from + "移动到" + to);
     }
 
     public static void hanoi(int n, char A, char B, char C){

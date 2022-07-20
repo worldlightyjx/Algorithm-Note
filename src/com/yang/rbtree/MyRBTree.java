@@ -1,3 +1,5 @@
+package src.com.yang.rbtree;
+
 public class MyRBTree<K extends Comparable<K>, V>{
     private static final boolean RED = true;
     private static final boolean BLACK = false;
@@ -66,8 +68,8 @@ public class MyRBTree<K extends Comparable<K>, V>{
     }
     private void flipColors(Node node){
         node.color = RED;
-        node.left = BLACK;
-        node.right = BLACK;
+        node.left.color = BLACK;
+        node.right.color = BLACK;
     }
     private Node add(Node node, K key, V value){
         if(node==null){
@@ -86,9 +88,9 @@ public class MyRBTree<K extends Comparable<K>, V>{
         }
 
         if(isRed(node.left)&& isRed(node.left.left)){
-            node.rightRotate(node);
+            node= rightRotate(node);
         }
-        if(isRed(node.left)&&isRed(node.right){
+        if(isRed(node.left)&&isRed(node.right)){
             flipColors(node);
         }
 

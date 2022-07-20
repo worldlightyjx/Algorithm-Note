@@ -1,6 +1,5 @@
-package com.yang.huaweitest;
+package src.com.yang.interview.huaweitest;
 
-import sun.plugin2.gluegen.runtime.CPU;
 
 import java.util.Scanner;
 

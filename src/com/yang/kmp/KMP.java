@@ -1,7 +1,8 @@
-package com.yang.KMP;
+package src.com.yang.kmp;
 
 public class KMP {
-    public static int getIndexof(String s, String m){
+
+    public int indexOf(String s, String m){
         if(s==null||m==null||m.length()>s.length()||m.length()<1)
             return -1;
         char[] str1 = s.toCharArray();
@@ -40,10 +41,6 @@ public class KMP {
         return next;
     }
 
-    public static void main(String[] args) {
-        String str = "abcabcababacccggdgergevdfafgabbfefetabaferfefabbaabarfef";
-        String match = "ababa";
-        System.out.println(getIndexof(str, match));
-    }
+
 
     }

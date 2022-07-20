@@ -1,7 +1,6 @@
-package com.yang.test;
+package src.com.yang.interview.test;
 
 
-import java.util.HashMap;
 import java.util.Scanner;
 import java.util.TreeSet;
 
